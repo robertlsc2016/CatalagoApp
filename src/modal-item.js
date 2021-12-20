@@ -45,13 +45,14 @@ document.getElementById("produtosCarrinho").innerHTML = ''
 
 
 //ABRIR MODAL DO PRODUTO SELECIONADO
-container.addEventListener('click', function(e) {
+// container.addEventListener('click', function(e) {
 
+$("#container").click( (e) => {
+
+    // console.log(e.target.className)
     
+    const id = e.target.className
 
-
-    const id = e.path[3].id
-    alert(id)
     if (id >= 1 && id <= 9) {
 
         document.getElementById('quantidadeItem').value = 1
@@ -147,6 +148,7 @@ container.addEventListener('click', function(e) {
 
 
     }
+
 })
 
 function atuValorSubtotal() {

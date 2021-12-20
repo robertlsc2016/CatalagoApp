@@ -2131,13 +2131,13 @@
               <div class="card-produto-body">
 
                   <div id="descricoesProduto">
-                    <h3 id="itemTitulo">${itens.titulo}</h3>
-                    <p id="itemDescricao">${itens.descricao}</p>
-                    <p id="itemPreco">R$ ${itens.preco.toFixed(2)}</p>
+                    <h3 id="itemTitulo" class="${itens.id}">${itens.titulo}</h3>
+                    <p id="itemDescricao" class="${itens.id}">${itens.descricao}</p>
+                    <p id="itemPreco" class="${itens.id}">R$ ${itens.preco.toFixed(2)}</p>
                   </div>
 
                   <div id="imageProduto">
-                    <img src='${itens.fotos[0]}' alt="" id="itemIcone">
+                    <img src='${itens.fotos[0]}' alt="" id="itemIcone" class="${itens.id}">
                   </div>
 
               </div>
@@ -2160,13 +2160,13 @@
               <div class="card-produto-body">
 
                 <div id="descricoesProduto">
-                  <h3 id="itemTitulo">${itens.titulo}</h3>
-                  <p id="itemDescricao">${itens.descricao}</p>
-                  <p id="itemPreco">R$ ${itens.preco.toFixed(2)}</p>
+                  <h3 id="itemTitulo" class="${itens.id}">${itens.titulo}</h3>
+                  <p id="itemDescricao" class="${itens.id}">${itens.descricao}</p>
+                  <p id="itemPreco" class="${itens.id}">R$ ${itens.preco.toFixed(2)}</p>
                 </div>
 
                 <div id="imageProduto">
-                  <img src='${itens.fotos[0]}' alt="" id="itemIcone">
+                  <img src='${itens.fotos[0]}' alt="" id="itemIcone" class="${itens.id}">
                 </div>
               </div>
 
