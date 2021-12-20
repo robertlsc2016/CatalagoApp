@@ -29,8 +29,7 @@ let dadosDoProdutoSelecionado = {
     imagem: '',
     adicionais: '',
     quantidade: '',
-    precoQuantidade: '',
-    posicaoElementoNoArrayCarrinho: ''
+    precoQuantidade: ''
 }
 
 
@@ -48,11 +47,12 @@ document.getElementById("produtosCarrinho").innerHTML = ''
 //ABRIR MODAL DO PRODUTO SELECIONADO
 container.addEventListener('click', function(e) {
 
+    alert('entrou')
+
+    
     const id = e.path[3].id
+    
     if (id >= 1 && id <= 9) {
-
-
-        dadosDoProdutoSelecionado.posicaoElementoNoArrayCarrinho += 10
 
         document.getElementById('quantidadeItem').value = 1
 
