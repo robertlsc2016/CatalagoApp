@@ -299,7 +299,7 @@ function finalizarCarrinho() {
             verCarrinhoBotao.style.display = 'none'
             corpo.style.filter = "grayscale(60%) blur(1px)"
 
-            $("html").css({ "overflow": "auto" });
+            $("html").css({ "overflow": "hidden" });
             document.getElementById('finalizarPedido-container').style.display = 'flex'
 
             document.getElementById('subtotalPedido').innerHTML = 'R$ ' + `${VertotalItens.toFixed(2)}`
@@ -312,10 +312,8 @@ function finalizarCarrinho() {
             document.getElementById("endereco").style.display = 'flex'
 
 
-        } else {
-            // console.log('não bala')
-        }
-    });
+        } 
+    })
 
 
 }
