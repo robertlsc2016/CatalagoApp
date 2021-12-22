@@ -46,8 +46,6 @@ document.getElementById("produtosCarrinho").innerHTML = ''
 
 
 //ABRIR MODAL DO PRODUTO SELECIONADO
-// container.addEventListener('click', function(e) {
-
 $("#container").click((e) => {
 
     // console.log(e.target.id)
@@ -101,8 +99,6 @@ $("#container").click((e) => {
 
 
                             ${item.opcoes.map((item) => {
-                                // console.log(item)
-
                                 return (
 
                                     `
@@ -127,10 +123,7 @@ $("#container").click((e) => {
                     opcional[0].checked = true
 
 
-                } else {
-                    // console.log('NÃO TEM ADICIONAIS')
                 }
-
                 document.getElementById('subtotal').innerHTML = `R$ ${dadosDoProdutoSelecionado.preco.toFixed(2)}`
 
 
@@ -181,8 +174,6 @@ function fecharModal() {
     $("html").css({ "overflow": "auto" });
 
     verCarrinhoBotao.style.display = "flex"
-
-    // console.log("ok")
 
 
     document.getElementById("adicionaisBody").innerHTML = ''
@@ -276,7 +267,6 @@ function verCarrinho() {
 
 //FECHA O VER CARRINHO
 function fecharCarrinho() {
-    // console.log('entrou')
     document.getElementById('produtosCarrinho').innerHTML = ''
     document.getElementById('ver-carrinho-container').style.display = "none"
     document.getElementById('ver-carrinho').style.display = "flex"
@@ -358,7 +348,6 @@ $('#cep').blur(function () {
                 enderecoCliente = endereco
 
 
-                // console.log(endereco);
                 document.getElementById('cidade').value = endereco.localidade
                 document.getElementById('bairro').value = endereco.bairro
                 document.getElementById('rua').value = endereco.logradouro
@@ -389,8 +378,6 @@ function fecharCompra() {
 
 
     if (document.getElementById("OPreceberEmCasa").checked) {
-
-        // console.log('ok')
 
         if (document.getElementById('nomeCliente').value.length < 3) {
             alert('Nome Invalido')
@@ -455,7 +442,6 @@ function enviarPost() {
 
     };
 
-    // console.log(data)
 
 
 
@@ -468,10 +454,8 @@ function enviarPost() {
     })
         .then((response) => response.json())
         .then((data) => {
-            // console.log(data);
         })
         .catch((error) => {
-            // console.error("Error:", error);
         });
 
 
@@ -483,4 +467,3 @@ function enviarPost() {
 
 }
 
-// console.log('finalizou')

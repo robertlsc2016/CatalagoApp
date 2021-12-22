@@ -74,20 +74,25 @@ function modalEnviarMensagem(){
 
 // FECHAR MODAL DO MENU LATERAL
 $('.container-modal-menu-lateral').click((e) => {
-    document.getElementById('infoEEndereco').style.display = 'none'
-    document.getElementById('horarioAtendimento').style.display = 'none'
-    document.getElementById('ligarEmpresa').style.display = 'none'
-    document.getElementById('enviarMensagem').style.display = 'none'
+    console.log(e.target.className)
+
+    if(e.target.className == 'container-modal-menu-lateral'){
+        document.getElementById('infoEEndereco').style.display = 'none'
+        document.getElementById('horarioAtendimento').style.display = 'none'
+        document.getElementById('ligarEmpresa').style.display = 'none'
+        document.getElementById('enviarMensagem').style.display = 'none'
 
 
 
-    verCarrinhoBody.style.display = "flex"
+        verCarrinhoBody.style.display = "flex"
 
 
-    corpo.style.filter = "grayscale(0%) blur(0)"
+        corpo.style.filter = "grayscale(0%) blur(0)"
 
 
-    $("html").css({ "overflow": "auto" });
+        $("html").css({ "overflow": "auto" });
+    }
+
 
 })
 
