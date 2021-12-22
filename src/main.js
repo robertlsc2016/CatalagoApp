@@ -166,6 +166,7 @@ function fecharModal() {
     corpo.style.filter = 'grayscale(0) blur(0)'
 
     $("html").css({ "overflow": "auto" });
+    $("html").css({ "overflow-x": "hidden" });
 
     verCarrinhoBotao.style.display = "flex"
 
@@ -198,7 +199,10 @@ function adicionarAoCarrinho() {
     document.getElementById('modal-container').style.display = 'none'
     document.getElementById("adicionaisBody").innerHTML = ''
     $("html").css({ "overflow": "auto" });
+    $("html").css({ "overflow-x": "hidden" });
 
+
+    document.getElementById('totalCarrinhoAtual').innerHTML = `R$ ${VertotalItens.toFixed(2)} - (${verItensCarrinho.length})`
     corpo.style.filter = 'blur(0) grayscale(0)'
     verCarrinhoBotao.style.display = "flex"
 
@@ -263,7 +267,7 @@ function fecharCarrinho() {
 
     corpo.style.filter = "grayscale(0) blur(0)"
     $("html").css({ "overflow": "auto" });
-
+    $("html").css({ "overflow-x": "hidden" });
 }
 
 

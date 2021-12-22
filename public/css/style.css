@@ -124,6 +124,8 @@ corpo{
 
 
 #ver-carrinho{
+    position: relative;
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -148,7 +150,34 @@ corpo{
     cursor: pointer;
 }
 
+#ver-carrinho p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
 
+
+#ver-carrinho p:nth-child(2){
+
+    width: auto;
+    height: auto;
+    position: absolute;
+
+
+    bottom: 0;
+
+    font-size: 0.6rem;
+}
+
+
+#totalCarrinhoAtual{
+
+    height: 100%;
+    width: 100%;
+
+}
 
 
 h1{
@@ -261,8 +290,9 @@ header #menu-abrir img{
 #ver-carrinho-meuDireito{
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: space-between;
+    flex-direction: row;
+
     width: 100%;
     height: 5vh;
 
@@ -729,7 +759,7 @@ header #menu-abrir img{
 
     align-items: center;
 
-    width: 65%;
+    width: 100%;
     height: 100%;
 
     
@@ -1853,6 +1883,9 @@ header #menu-abrir img{
 
 @media only screen and (min-width: 600px) {
     
+    body{
+        overflow-x: hidden;
+    }
 
     /* width of the entire scrollbar */
     body::-webkit-scrollbar {
@@ -1866,9 +1899,8 @@ header #menu-abrir img{
         background-color: #3A7CF5;    /* color of the scroll thumb */
         border-radius: 20px;       /* roundness of the scroll thumb */
 
-        overflow-x:hidden;
 
-      }
+    }
 
     header{
         display: flex;
@@ -1891,13 +1923,8 @@ header #menu-abrir img{
     
     }
 
-    body {
-        overflow-x:hidden;
-    }
-
 
     #container {
-        overflow-x:hidden;
       
         width: 80%;
     }
