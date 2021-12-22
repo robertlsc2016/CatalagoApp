@@ -4,11 +4,9 @@ const corpo = document.getElementById("corpo")
 const modalContainerBody = document.getElementById('modal-container-body')
 const verCarrinhoBotao = document.getElementById("ver-carrinho")
 
-// MASK DO NÚMERO DE TELEFONE
 $('#numeroTelefoneCliente').mask('(00) 0 0000-0000');
 $('#cep').mask('00000-000');
 
-// PERMITIR APENAS LETRAS NO INPUT
 $("#nomeCliente").on("input", function () {
     var regexp = /[^a-zA-Z]/g;
     if (this.value.match(regexp)) {
