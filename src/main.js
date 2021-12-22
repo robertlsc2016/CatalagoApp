@@ -131,7 +131,7 @@ $("#container").click((e) => {
 
 
                 verCarrinhoBotao.style.display = "none"
-                corpo.style.filter = "grayscale(60%) blur(1px)"
+                corpo.style.filter = "grayscale(60%) blur(5px)"
                 modal.style.display = "flex"
 
 
@@ -260,7 +260,7 @@ function verCarrinho() {
     document.getElementById('ver-carrinho').style.display = "none"
 
     document.getElementById('ver-carrinho-container').style.display = "flex"
-    corpo.style.filter = "grayscale(60%) blur(1px)"
+    corpo.style.filter = "grayscale(60%) blur(5px)"
 
     $("html").css({ "overflow": "hidden" });
 
@@ -288,7 +288,7 @@ function finalizarCarrinho() {
             fecharCarrinho()
 
             verCarrinhoBotao.style.display = 'none'
-            corpo.style.filter = "grayscale(60%) blur(1px)"
+            corpo.style.filter = "grayscale(60%) blur(5px)"
 
             $("html").css({ "overflow": "hidden" });
             document.getElementById('finalizarPedido-container').style.display = 'flex'
