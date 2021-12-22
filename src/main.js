@@ -84,6 +84,8 @@ $("#container").click((e) => {
 
                 adicionarDadosItens()
 
+                $("html").css({ "overflow": "hidden" });
+
                 if (dadosDoProdutoSelecionado.adicionais.length > 0) {
 
                     document.getElementById('adicionais').style.display = 'flex'
@@ -133,7 +135,6 @@ $("#container").click((e) => {
                 modal.style.display = "flex"
 
 
-                $("html").css({ "overflow": "hidden" });
                 verCarrinhoBotao.style.display = "none"
 
             })
