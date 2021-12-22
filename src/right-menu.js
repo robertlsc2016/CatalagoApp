@@ -2,7 +2,6 @@ const menuDireito = document.getElementById("right-menu")
 const opAbrir = document.getElementById("menu-abrir")
 const verCarrinhoBody = document.getElementById("ver-carrinho")
 
-// ABRIR MENU
 $("#menu-abrir").click(function () {
 
     document.getElementById('infoEEndereco').style.display = 'none'
@@ -72,11 +71,6 @@ function modalEnviarMensagem(){
 
 
 
-
-
-
-
-// FECHAR MODAL DO MENU LATERAL
 $('.container-modal-menu-lateral').click((e) => {
     console.log(e.target.className)
 
@@ -101,12 +95,6 @@ $('.container-modal-menu-lateral').click((e) => {
 })
 
 
-
-
-
-
-
-// FECHAR MENU
 menuDireito.addEventListener('click', (e) => {
 
     if (e.target.id == "right-menu") {

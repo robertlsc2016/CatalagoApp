@@ -40,15 +40,9 @@ let dadosDoProdutoSelecionado = {
 }
 
 
-
-// LIMPAR O CONTAINER DE PRODUTOS
 document.getElementById("produtosCarrinho").innerHTML = ''
 
-
-//ABRIR MODAL DO PRODUTO SELECIONADO
 $("#container").click((e) => {
-
-    // console.log(e.target.id)
 
     const id = e.target.className
 
@@ -167,7 +161,6 @@ function atuValorOp() {
 }
 
 
-//FECHAR MODAL DO PRODUTO SELECIONADO
 function fecharModal() {
 
     corpo.style.filter = 'grayscale(0) blur(0)'
@@ -183,8 +176,6 @@ function fecharModal() {
     dadosDoProdutoSelecionado = {}
 
 }
-
-//INSERI O PRODUTO SELECIONADO NO CARRINHO
 function adicionarAoCarrinho() {
     VertotalItens = 0;
 
@@ -215,7 +206,6 @@ function adicionarAoCarrinho() {
     dadosDoProdutoSelecionado = {}
 }
 
-//BOTÃO VER CARRINHO - EXIBI O MODAL DE TODOS OS ITENS DO CARRINHO
 function verCarrinho() {
     document.getElementById("right-menu").style.display = 'none'
 
@@ -266,7 +256,6 @@ function verCarrinho() {
 
 }
 
-//FECHA O VER CARRINHO
 function fecharCarrinho() {
     document.getElementById('produtosCarrinho').innerHTML = ''
     document.getElementById('ver-carrinho-container').style.display = "none"
@@ -278,12 +267,10 @@ function fecharCarrinho() {
 }
 
 
-//ABRIR MODAL PARA FINALIZAR PEDIDO
 function finalizarCarrinho() {
 
     $("#total-carrinho").click(function () {
 
-        //SE FOR MAIOR QUE 0, SIGNIFICA QUE POSSUI ITEM NO CARRINHO, PASSAR PARA FASE DE COLETA DE DADOS DO CLIENTE
         if (verItensCarrinho.length > 0) {
             fecharCarrinho()
 
@@ -425,7 +412,6 @@ function fecharCompra() {
 
 function enviarPost() {
 
-    // ESSA CONSTANTE ABAIXO TRAZ TODAS AS INFORMAÇÕES NECESSÁRIAS PARA ENTREGA DO PEDIDO E DO PEDIDO
     const data = {
         pedido: verItensCarrinho,
         entrega: `${document.querySelector('input[name="selecFormaDeEntrega"]:checked').value}`,

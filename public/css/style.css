@@ -9,8 +9,6 @@
     box-sizing: border-box;
 
     font-family: 'Rubik', sans-serif;
-
-    /* border: 0.1px solid black;  */
 }
 
 
@@ -55,7 +53,6 @@ header{
     justify-content: space-between;
     
     top: 0;
-    /* width: 375px; */
     width: 100vw;
     height: 10vh;
 
@@ -139,7 +136,6 @@ corpo{
     top: 90vh;
     
 
-    /* width: 100%; */
     width: 85%;
     height: 7vh;
 
@@ -147,7 +143,7 @@ corpo{
     font-size: 1.5rem;
 
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.50) 0px 2px 10px;
+    box-shadow: rgba(0, 0, 0, 0.50) 0px 2px 4px;
 
     cursor: pointer;
 }
@@ -173,7 +169,6 @@ h1{
     text-align: center;
     text-decoration: none;
     color: white;
-    /* all: unset; */
 
 
 }
@@ -201,8 +196,6 @@ h2{
     align-items: center;
     justify-content: center;
 
-
-    /* background: chartreuse; */
     width: 20%;
     height: 100%;
 }
@@ -222,9 +215,7 @@ header #menu-abrir img{
     position: fixed;
 
     top: 0;
-    /* padding-top: 10vh; */
     z-index: 7;
-    /* background-color: chartreuse; */
     
     height: auto;
     width: 100%;
@@ -243,7 +234,6 @@ header #menu-abrir img{
     overflow: hidden;
     width: 60%;
     height: 330vh;
-    /* height: auto; */
     
     background-color: #31343B;
 
@@ -263,9 +253,6 @@ header #menu-abrir img{
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 1rem;
-    /* background-color: grey; */
-    
-    /* superior | direita | inferior | esquerda */
     margin: 3vh 0 0 0;
 }
 
@@ -298,7 +285,6 @@ header #menu-abrir img{
 
 
 .container-modal-menu-lateral{
-    /* background-color: #18DA18; */
     position: fixed;
     
     
@@ -366,7 +352,6 @@ header #menu-abrir img{
     width: 100%;
     height: 20%;
 
-    /* background-color: #18DA18; */
 }
 #top-modal h2{
     font-size: 1rem;
@@ -390,7 +375,6 @@ header #menu-abrir img{
     width: 100%;
     height: 80%;
 
-    /* background-color: #314731; */
 }
 
 
@@ -504,7 +488,6 @@ header #menu-abrir img{
     width: 100%;
     height: 40%;
 
-    /* background: #18DA18; */
 }
 
 #tituloMural{
@@ -567,8 +550,6 @@ header #menu-abrir img{
     height: 100%;
     width: 100%;
 
-    /* padding: 3%; */
-
     font-size: 1.5rem;
     font-weight: 800;
 
@@ -581,7 +562,6 @@ header #menu-abrir img{
 
     color: white;
     font-weight: 600;
-    /* background-color: black; */
 }
 
 
@@ -640,8 +620,6 @@ header #menu-abrir img{
 
     align-items: left;
     height: auto;
-
-    /* background-color: red; */
     padding-top: 10vh;
 }
 
@@ -695,7 +673,6 @@ header #menu-abrir img{
     height: auto;
     width: 100%;
 
-    /* background-color: chocolate; */
     padding-top: 10vh;
 }
 
@@ -708,47 +685,7 @@ header #menu-abrir img{
 
     padding-bottom: 20vh;
 
-    /* background-color: greenyellow; */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -764,7 +701,6 @@ header #menu-abrir img{
     width: 100%;
     height: 15vh;
 
-    /* superior | direita | inferior | esquerda */
     margin: 5% 0 5% 0;
 
     cursor: pointer;
@@ -802,7 +738,6 @@ header #menu-abrir img{
 #imageProduto{
     width: 35%;
     height: 100%;
-    /* imagem */
 }
 
 #itemTitulo{
@@ -868,66 +803,6 @@ header #menu-abrir img{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* -------------------------------------------- MODAL -------------------------------------------- */
 
 
@@ -965,7 +840,6 @@ header #menu-abrir img{
 
     flex-direction: column;
 
-    /* background-color: rgb(158, 34, 34); */
     border-radius: 20px;
 
     height: 100%;
@@ -974,7 +848,6 @@ header #menu-abrir img{
     background-color: white;
     padding: 10%;
 
-    /* overflow: hidden; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 10px;
 }
 
@@ -988,7 +861,6 @@ header #menu-abrir img{
 
     position: absolute;
     top: 10px;
-    /* right: 15px; */
     right: 10px;
 
     width: 8%;
@@ -1014,9 +886,6 @@ header #menu-abrir img{
 
     object-fit: contain;
 
-    /* height: 100%; */
-
-    /* width: 10%; */
 }
 
 #modalImageBody{
@@ -1037,7 +906,6 @@ header #menu-abrir img{
     width: 100%;
     height: 50%;
 
-    /* background-color: blue; */
 }
 
 #modalBody{
@@ -1098,8 +966,6 @@ header #menu-abrir img{
     width: 100%;
     height: 40%;
     overflow-y: auto;
-
-    /* background-color: rgb(75, 75, 44); */
 }
 
 #adicionaisBody{
@@ -1119,7 +985,6 @@ header #menu-abrir img{
     align-items:center;
     width: 100%;
 
-    /* background-color: burlywood; */
 }
 
 
@@ -1131,7 +996,6 @@ header #menu-abrir img{
     width: 100%;
     height: 10%;
 
-    /* background-color: blueviolet; */
 }
 
 
@@ -1209,7 +1073,6 @@ header #menu-abrir img{
     padding: 1%;
     z-index: 2;
 
-    /* background-color: white; */
 
     
     overflow-y: auto;
@@ -1229,11 +1092,8 @@ header #menu-abrir img{
     height: 100%;
     width: 100%;
 
-    /* background-color: rgb(76, 87, 47); */
     padding: 7%;
-    /* overflow-y: auto; */
 
-    /* overflow: hidden; */
     background-color: #f5f7fd;
     box-shadow: rgba(149, 157, 165, 0.60) 2px 8px 16px;
 }
@@ -1248,16 +1108,11 @@ header #menu-abrir img{
     width: 95%;
     height: 12vh;
 
-    /* superior | direita | inferior | esquerda */
     margin: 5% 0 0% 0;
 
     cursor: pointer;
 
-    /* border: 0.1px solid gray; */
     border-radius: 10px;
-
-    /* superior | direita | inferior | esquerda */
-    padding: 0% 0  0% 0;
 
     background-color: white;
 
@@ -1280,7 +1135,6 @@ header #menu-abrir img{
 }
 
 #produtosCarrinho{
-    /* position: relative; */
 
     display: flex;
     flex-direction: column;
@@ -1291,7 +1145,6 @@ header #menu-abrir img{
     width: 100%;
     height: 80%;
 
-    /* padding-top: 7vh; */
     padding-bottom: 1%;
     overflow:auto; 
 
@@ -1318,7 +1171,6 @@ header #menu-abrir img{
     align-items: center;
     justify-content: flex-start;
     
-    /* text-align: lef; */
 
     font-size: 0.7rem;
 
@@ -1328,10 +1180,7 @@ header #menu-abrir img{
 
     height: 30%;
     font-weight: 500;
-    width: 100%;
-
-    /* padding: 0% 10% 0 0 ; */
-    
+    width: 100%;    
 }
 
 #itemDescricao-carrinho{
@@ -1405,8 +1254,6 @@ header #menu-abrir img{
 
 #topVerCarrinho{
     margin-bottom: 0%;
-    /* background-color: white; */
-    /* position: fixed; */
     width: 100%;
     height: 5%;
 }
@@ -1452,7 +1299,6 @@ header #menu-abrir img{
 
     width: 100%;
     height: 100%;
-    /* background-color: grey; */
 }
 
 #total{
@@ -1501,7 +1347,6 @@ header #menu-abrir img{
 
     padding: 1%;
     z-index: 3;
-    /* background-color: rgb(247, 242, 242); */
 }
 
 
@@ -1559,7 +1404,6 @@ header #menu-abrir img{
 
     height: 15%;
 
-    /* background-color: blue; */
 }
 
 #finalizarPedido-corpo2 div:nth-child(1){
@@ -1570,7 +1414,6 @@ header #menu-abrir img{
 
     width: 100%;
     height: 70%;
-    /* background-color: green; */
 }
 
 
@@ -1582,7 +1425,6 @@ header #menu-abrir img{
 
     width: 100%;
     height: 30%;
-    /* background-color: green; */
 }
 
 
@@ -1613,7 +1455,6 @@ header #menu-abrir img{
     width: 100%;
     height: 3%;
 
-    /* background-color: green; */
 }
 
 #Voltar-finalizarPedido img{
@@ -1626,19 +1467,6 @@ header #menu-abrir img{
 #FinalizarPedido-corpo1 #resumoPedido{
     margin-top: 0;
 }
-
-/* #FinalizarPedido-corpo1 #opEntrega{
-    background-color: none;
-    background: none;
-    box-shadow: none;
-
-    height: 6vh;
-
-
-    padding: 0%;
-
-
-} */
 
 
 
@@ -1694,14 +1522,12 @@ header #menu-abrir img{
 
     width: 100%;
 
-    /* padding: 5%; */
     background-color: none;
     border-radius: 10px;
 
     margin-top: 5%;
     padding: 5%;
 
-    /* box-shadow: rgba(149, 157, 165, 0.30) 0px 8px 24px 0px; */
     font-size: 0.7rem;
 
     height: 6vh;
@@ -1723,7 +1549,6 @@ header #menu-abrir img{
     box-shadow: rgba(149, 157, 165, 0.30) 0px 8px 8px;
     border-radius: 5px;
 
-    /* border: 3px solid hsl(225.1,85.79%,64.12%); */
     border: 3px solid grey;
 
 }
@@ -1736,7 +1561,6 @@ header #menu-abrir img{
     align-items: center;
 
     width: 100%;
-    /* height: 50vh; */
 
 
     padding: 5%;
@@ -1763,7 +1587,6 @@ header #menu-abrir img{
     height: auto;
 
     margin-top: 5%;
-    /* background-color: #18DA18; */
 }
 
 
@@ -1984,7 +1807,6 @@ header #menu-abrir img{
 
     flex-direction: column;
 
-    /* background-color: rgb(158, 34, 34); */
     border-radius: 20px;
 
     height: 100%;
@@ -2161,7 +1983,6 @@ header #menu-abrir img{
         width: 100%;
         height: 20vh;
     
-        /* superior | direita | inferior | esquerda */
         margin: 3% 0 3% 0;
     
         cursor: pointer;
@@ -2172,6 +1993,5 @@ header #menu-abrir img{
     #body-bebidas{
         padding-bottom: 10vh;
 
-        /* background-color: greenyellow; */
     }
 }

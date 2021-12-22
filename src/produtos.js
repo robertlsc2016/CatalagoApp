@@ -2106,6 +2106,8 @@
       }).call(this)
     }).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
   }, {}], 32: [function (require, module, exports) {
+ 
+
 
     const fetch = require('node-fetch')
 
@@ -2116,13 +2118,8 @@
         const bolos = dadosLoja.produtos[0]
         const pizzas = dadosLoja.produtos[1]
         const bebidas = dadosLoja.produtos[2]
-        // console.log(bolos)
 
-
-        // INSERIR BOLOS
-        let idBolos = 1000
         bolos.produtos.map((itens) => {
-          idBolos++
 
           document.getElementById("body-bolos").innerHTML +=
             `
@@ -2147,13 +2144,7 @@
           `
         })
 
-        // INSERIR PIZZAS
-        let idPizzas = 2000
         pizzas.produtos.map((itens) => {
-          // console.log(itens)
-
-          idPizzas++
-
           document.getElementById("body-salgados").innerHTML +=
             `
             <div class="card-produto" id='${itens.id}'>
@@ -2175,10 +2166,7 @@
           `
         })
 
-        // INSERIR BEBIDAS
-        let idBebidas = 3000
         bebidas.produtos.map((itens) => {
-          idBebidas++
           document.getElementById("body-bebidas").innerHTML +=
             `
             <div class="card-produto" id='${itens.id}'>
