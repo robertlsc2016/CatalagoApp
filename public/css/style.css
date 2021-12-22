@@ -85,6 +85,8 @@ header{
 
     width: 100%;
     height: 100%;
+
+    background-color: none;
 }
 
 #logo-body img{
@@ -181,36 +183,6 @@ h2{
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -323,8 +295,138 @@ header #menu-abrir img{
 
 
 
+.container-modal-menu-lateral{
+    /* background-color: #18DA18; */
+    position: fixed;
+    
+    
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+
+    height: 90vh;
+    
 
 
+    top: 10vh;
+    
+    overflow: hidden;
+
+    /* background-color:  rgb(255, 255, 255); */
+    border-radius: 20px;
+    padding: 1%;
+    z-index: 2;
+
+    padding: 8%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 10px;
+
+}
+
+
+#body-modal-menu-lateral{
+    
+    position: relative;
+    
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+
+    height: 90%;
+    
+
+    
+    overflow: hidden;
+
+    background-color:  rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 1%;
+    z-index: 2;
+
+    padding: 8%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 10px;
+}
+
+
+#top-modal{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+
+    /* background-color: #18DA18; */
+}
+#top-modal h2{
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+#top-modal img{
+    object-fit: contain;
+    width: 100%;
+    height: 30%;
+}
+
+
+
+#body-modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+
+    /* background-color: #314731; */
+}
+
+
+#body-modal div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 50%;
+}
+
+#mapa-localização{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    border-radius: 15px;
+    width: 95%;
+    height: 90%;
+}
+
+
+
+#body-modal div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 50%;
+}
+
+
+#body-modal p{
+    margin: 1% 0 1% 0;
+    text-align: center;
+    width: 100%;
+}
 
 
 
@@ -455,6 +557,7 @@ header #menu-abrir img{
 
 
 #bolos-mural a, #salgados-mural a, #bebidas-mural a{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -473,7 +576,7 @@ header #menu-abrir img{
 
 #bolos-mural a  p, #salgados-mural a p, #bebidas-mural a p{
     position: absolute;
-    margin: 0 0 1% 1%;
+    margin: 0 0 3% 3%;
 
     color: white;
     font-weight: 600;
@@ -688,14 +791,14 @@ header #menu-abrir img{
 
     align-items: center;
 
-    width: 70%;
+    width: 65%;
     height: 100%;
 
     
 }
 
 #imageProduto{
-    width: 30%;
+    width: 35%;
     height: 100%;
     /* imagem */
 }
@@ -882,9 +985,9 @@ header #menu-abrir img{
     align-items: center;
 
     position: absolute;
-    top: 15px;
+    top: 10px;
     /* right: 15px; */
-    right: 0px;
+    right: 10px;
 
     width: 8%;
     height: 4%;
@@ -1047,7 +1150,7 @@ header #menu-abrir img{
     color: white;
     font-size: 0.8rem;
 
-    border-radius: 50px;
+    border-radius: 20px;
 
     cursor: pointer;
 
@@ -1076,6 +1179,7 @@ header #menu-abrir img{
 }
 
 #quantidadeItem{
+    text-align: center;
     border-radius: 20px;
     height: 100%;
     width: 40%;
@@ -1639,14 +1743,49 @@ header #menu-abrir img{
     box-shadow: rgba(149, 157, 165, 0.30) 0px 8px 8px ;
 }
 
-
-#endereco div:nth-child(1){
+#enderecoTop{
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    
+    width: 100%;
 }
 
-#endereco div{
+#enderecoBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+
+    margin-top: 5%;
+    /* background-color: #18DA18; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#enderecoBody div:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 100%;
+}
+
+#enderecoBody div{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1659,12 +1798,12 @@ header #menu-abrir img{
     
 }
 
-#endereco div p{
+#enderecoBody div p{
     width: 30%;
 }
 
 
-#endereco div input{
+#enderecoBody div input{
     text-align: left;
     padding-left: 2%;
     border: 3px solid gray;
@@ -1718,14 +1857,15 @@ header #menu-abrir img{
 
 
 #DadosCliente input{
-
     width: 100%;
     height: 30%;
 
     border-radius: 10px;
     border: 3px solid gray;
 
-    padding: 1% 1% 1% 5%;
+    padding: 3% 1% 3% 5%;
+
+    font-size: 1rem;
 }
 
 #DadosCliente input:focus{
@@ -1757,6 +1897,12 @@ header #menu-abrir img{
 
 }
 
+#formaDePagamento select option{
+    width: 100%;
+
+}
+
+
 #formaDePagamento p{
     font-size: 1rem;
     font-weight: 700;
@@ -1765,12 +1911,15 @@ header #menu-abrir img{
 }
 
 #formaDePagamento select{
+    margin-top: 5%;
     height: 50%;
     width: 100%;
 
     border: 3px solid gray;
 
+    border-radius: 10px;
 
+    padding: 2%;
 }
 
 #formaDePagamento select:focus{
@@ -1789,6 +1938,10 @@ header #menu-abrir img{
 }
 
 
+#formaDePagamento select:focus{
+    border: 3px solid #1b50ec;
+
+}
 
 
 

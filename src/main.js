@@ -4,10 +4,17 @@ const corpo = document.getElementById("corpo")
 const modalContainerBody = document.getElementById('modal-container-body')
 const verCarrinhoBotao = document.getElementById("ver-carrinho")
 
+// MASK DO NÚMERO DE TELEFONE
 $('#numeroTelefoneCliente').mask('(00) 0 0000-0000');
 $('#cep').mask('00000-000');
 
-
+// PERMITIR APENAS LETRAS NO INPUT
+$("#nomeCliente").on("input", function () {
+    var regexp = /[^a-zA-Z]/g;
+    if (this.value.match(regexp)) {
+        $(this).val(this.value.replace(regexp, ''));
+    }
+});
 
 
 
@@ -34,12 +41,6 @@ let dadosDoProdutoSelecionado = {
 
 
 
-// document.getElementById('produtosCarrinho').addEventListener('click', function(e) => {
-//     // console.log(e)
-//     // console.log(verItensCarrinho.length)
-// })
-
-
 // LIMPAR O CONTAINER DE PRODUTOS
 document.getElementById("produtosCarrinho").innerHTML = ''
 
@@ -47,10 +48,10 @@ document.getElementById("produtosCarrinho").innerHTML = ''
 //ABRIR MODAL DO PRODUTO SELECIONADO
 // container.addEventListener('click', function(e) {
 
-$("#container").click( (e) => {
+$("#container").click((e) => {
 
-    // console.log(e.target.className)
-    
+    // console.log(e.target.id)
+
     const id = e.target.className
 
     if (id >= 1 && id <= 9) {
@@ -70,7 +71,7 @@ $("#container").click( (e) => {
                 dadosDoProdutoSelecionado.posicaoElementoNoArrayCarrinho
 
                 dadosDoProdutoSelecionado.quantidade = 1
-                dadosDoProdutoSelecionado.precoQuantidade = parseFloat(dadosDoProdutoSelecionado.preco * parseInt(document.getElementById("quantidadeItem").value).toFixed(2))
+                dadosDoProdutoSelecionado.precoQuantidade = parseFloat (dadosDoProdutoSelecionado.preco * parseInt(document.getElementById("quantidadeItem").value).toFixed(2) )
 
                 function adicionarDadosItens() {
 
@@ -88,7 +89,8 @@ $("#container").click( (e) => {
                 if (dadosDoProdutoSelecionado.adicionais.length > 0) {
 
                     document.getElementById('adicionais').style.display = 'flex'
-                    // console.log(dadosDoProdutoSelecionado.adicionais)
+
+
                     let ops = 100
 
                     dadosDoProdutoSelecionado.adicionais.map((item) => {
@@ -105,7 +107,7 @@ $("#container").click( (e) => {
 
                                     `
                                         <div id="opadiconais">
-                                            <input type="radio" id="${item.id}" name="${ops}" value="${item.preco}" onclick="">
+                                            <input type="radio" id="opcional" name="${ops}" value="${item.preco}" onclick="atuValorOp()">
 
                                             <p>${item.titulo}</p>
                                             <p>R$ ${item.preco.toFixed(2)}</p>
@@ -114,17 +116,15 @@ $("#container").click( (e) => {
                                     `
 
                                 )
-
-
                             }).join('')
-
-
                             }
                         
                             
                         `
                         ops++
                     })
+
+                    opcional[0].checked = true
 
 
                 } else {
@@ -151,17 +151,27 @@ $("#container").click( (e) => {
 
 })
 
-function atuValorSubtotal() {
 
-    document.getElementById('subtotal').innerHTML = `R$ ${(dadosDoProdutoSelecionado.preco * document.getElementById("quantidadeItem").value).toFixed(2)}`
 
+function atuQuantidade(){
     dadosDoProdutoSelecionado.precoQuantidade = parseFloat((dadosDoProdutoSelecionado.preco * parseInt(document.getElementById("quantidadeItem").value)).toFixed(2))
-
     dadosDoProdutoSelecionado.quantidade = parseFloat(document.getElementById("quantidadeItem").value)
+
+    document.getElementById('subtotal').innerHTML = `R$ ${dadosDoProdutoSelecionado.precoQuantidade.toFixed(2)}`
 
 
 
 }
+
+
+function atuValorOp() {
+    dadosDoProdutoSelecionado.preco = Number(parseFloat(document.querySelector('input[name="100"]:checked').value)).toFixed(2)
+    dadosDoProdutoSelecionado.precoQuantidade = parseFloat((dadosDoProdutoSelecionado.preco * parseInt(document.getElementById("quantidadeItem").value)).toFixed(2))
+
+    document.getElementById('subtotal').innerHTML = `R$ ${dadosDoProdutoSelecionado.precoQuantidade.toFixed(2)}`
+
+}
+
 
 //FECHAR MODAL DO PRODUTO SELECIONADO
 function fecharModal() {
@@ -215,6 +225,8 @@ function adicionarAoCarrinho() {
 
 //BOTÃO VER CARRINHO - EXIBI O MODAL DE TODOS OS ITENS DO CARRINHO
 function verCarrinho() {
+    document.getElementById("right-menu").style.display = 'none'
+
     verItensCarrinho.map((itens) => {
         document.getElementById('produtosCarrinho').innerHTML +=
             `
@@ -299,7 +311,7 @@ function finalizarCarrinho() {
             document.querySelector("#OPreceberEmCasa").setAttribute("checked", "checked")
             document.getElementById("endereco").style.display = 'flex'
 
-            
+
         } else {
             // console.log('não bala')
         }
@@ -316,13 +328,7 @@ function voltarVerCarrinho() {
 }
 
 
-// PERMITIR APENAS LETRAS NO INPUT
-$("#nomeCliente").on("input", function () {
-    var regexp = /[^a-zA-Z]/g;
-    if (this.value.match(regexp)) {
-        $(this).val(this.value.replace(regexp, ''));
-    }
-});
+
 
 
 
@@ -340,40 +346,40 @@ $("#OPretirarNoLocal").click(function () {
     document.getElementById('totalPedido').innerHTML = 'R$ ' + `${(VertotalItens).toFixed(2)}`
     document.getElementById('taxaDeEntrega').style.visibility = 'hidden'
 
-    
+
 });
 
 
 
 
-$('#cep').blur(function(){
-    if(document.getElementById("cep").value.length == 9 ){
+$('#cep').blur(function () {
+    if (document.getElementById("cep").value.length == 9) {
         fetch(`https://viacep.com.br/ws/${document.getElementById("cep").value}/json/`)
-        .then((response) => response.json())
-        .then((endereco) => {
-            enderecoCliente = endereco
+            .then((response) => response.json())
+            .then((endereco) => {
+                enderecoCliente = endereco
 
 
-            // console.log(endereco);
-            document.getElementById('cidade').value = endereco.localidade
-            document.getElementById('bairro').value = endereco.bairro
-            document.getElementById('rua').value = endereco.logradouro
+                // console.log(endereco);
+                document.getElementById('cidade').value = endereco.localidade
+                document.getElementById('bairro').value = endereco.bairro
+                document.getElementById('rua').value = endereco.logradouro
 
-            if(endereco.erro){
-                document.getElementById('cep').value = null
+                if (endereco.erro) {
+                    document.getElementById('cep').value = null
 
-                document.getElementById('cidade').value  = null
-                document.getElementById('bairro').value = null
-                document.getElementById('rua').value = null
-                
-                document.getElementById('numero').value = null
+                    document.getElementById('cidade').value = null
+                    document.getElementById('bairro').value = null
+                    document.getElementById('rua').value = null
 
-                alert('CEP INVALIDO')
-            }
+                    document.getElementById('numero').value = null
 
-        })
+                    alert('CEP INVALIDO')
+                }
 
-    }else{
+            })
+
+    } else {
         alert('CEP INVALIDO')
     }
 })
@@ -384,35 +390,35 @@ $('#cep').blur(function(){
 function fecharCompra() {
 
 
-    if(document.getElementById("OPreceberEmCasa").checked){
+    if (document.getElementById("OPreceberEmCasa").checked) {
 
         // console.log('ok')
 
-        if(document.getElementById('nomeCliente').value.length < 3){
+        if (document.getElementById('nomeCliente').value.length < 3) {
             alert('Nome Invalido')
-    
+
             return;
-            
+
         }
-    
-    
-        if(document.getElementById('numeroTelefoneCliente').value.length < 16){
+
+
+        if (document.getElementById('numeroTelefoneCliente').value.length < 16) {
             alert('Número de telefone inválido')
             return;
-    
+
         }
-    
-        if(document.getElementById('cep').value.length < 9){
+
+        if (document.getElementById('cep').value.length < 9) {
             alert('CEP Inválido')
             return;
-    
+
         }
-    
-    
-        if(document.getElementById('numero').value.length < 1){
+
+
+        if (document.getElementById('numero').value.length < 1) {
             alert('Numero invalido')
             return;
-    
+
         }
 
         VertotalItens += 5
@@ -478,3 +484,5 @@ function enviarPost() {
 
 
 }
+
+// console.log('finalizou')
