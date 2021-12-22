@@ -37,6 +37,7 @@ $("#menu-abrir").click(function () {
 function modalInfoEEndereco(){
     menuDireito.style.display = 'none'
     corpo.style.filter = "grayscale(60%) blur(5px)"
+    $("html").css({ "overflow": "hidden" });
 
     document.getElementById('infoEEndereco').style.display = 'flex'
 }
@@ -46,6 +47,7 @@ function modalInfoEEndereco(){
 function modalHorarioAtendimento(){
     menuDireito.style.display = 'none'
     corpo.style.filter = "grayscale(60%) blur(5px)"
+    $("html").css({ "overflow": "hidden" });
 
     document.getElementById('horarioAtendimento').style.display = 'flex'
 
@@ -54,6 +56,7 @@ function modalHorarioAtendimento(){
 function modalLigarEmpresa(){
     menuDireito.style.display = 'none'
     corpo.style.filter = "grayscale(60%) blur(5px)"
+    $("html").css({ "overflow": "hidden" });
 
     document.getElementById('ligarEmpresa').style.display = 'flex'
 }
@@ -62,6 +65,7 @@ function modalLigarEmpresa(){
 function modalEnviarMensagem(){
     menuDireito.style.display = 'none'
     corpo.style.filter = "grayscale(60%) blur(5px)"
+    $("html").css({ "overflow": "hidden" });
 
     document.getElementById('enviarMensagem').style.display = 'flex'
 }
